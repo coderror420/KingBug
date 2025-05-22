@@ -1,3 +1,5 @@
+# [Live Demo](https://kingbug.netlify.app/)
+
 # Namaste React 🚀🚀
 > used swiggy API's to fetch restaurant's data.
 # React Hooks
