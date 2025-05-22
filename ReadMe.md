@@ -1,6 +1,7 @@
 # [Live Demo](https://kingbug.netlify.app/)
 
-# Namaste React 🚀🚀
+# KingBug
+> Built using React, Redux , TailwindCSS.
 > used swiggy API's to fetch restaurant's data.
 # React Hooks
 (Normal JS utility functions)
