@@ -11,6 +11,12 @@ import UserContext from "./utils/userContext";
 import { Provider } from "react-redux";
 import AppStore from "./utils/AppStore";
 import Cart from "./components/Cart";
+import { ClerkProvider } from '@clerk/clerk-react'
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error('Missing Publishable Key')
+}
 
 const Contact = lazy(()=> import("./components/Contact"));
 
@@ -24,7 +30,9 @@ const AppLayout = () => {
 
   // },[]);
   return ( 
-    <Provider store={AppStore}>
+    <React.StrictMode>
+       <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl='/'>
+       <Provider store={AppStore}>
     {/* // <UserContext.Provider value={{loggedInUser:UserName , setUserName}}> */}
       <div className="app">
       <Header />
@@ -35,7 +43,10 @@ const AppLayout = () => {
     
     </div>
     {/* // </UserContext.Provider> */}
-    </Provider>
+    </Provider></ClerkProvider>
+      
+    </React.StrictMode>
+    
     
   );
 };
