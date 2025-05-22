@@ -16,7 +16,7 @@
 -Slice (cartSlice)
 -dispatch(action)
 -Selector
-# App Preview
+# Preview
 ![Screenshot 2025-05-22 132944](https://github.com/user-attachments/assets/8826cf21-48b4-4fd8-8244-8723f0ef440a)
 ![Screenshot 2025-05-22 133000](https://github.com/user-attachments/assets/8f05036c-9647-4378-9c59-9cf1f3be7e57)
 ![Screenshot 2025-05-22 133011](https://github.com/user-attachments/assets/91979175-3a35-421e-9822-108057335e28)
