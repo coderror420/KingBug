@@ -9,7 +9,7 @@
 - Client Side Routing
 - Server Side Routing
 
-# Reduc Toolkit
+# Redux Toolkit
 -Install @Reduxjs/Toolkit and react-redux
 -Build our store
 -Connect our store to our app
