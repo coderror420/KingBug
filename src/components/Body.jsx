@@ -43,7 +43,7 @@ const Body = () => {
       </h1>
     );
   }
-
+   
   // const { loggedInUser,setUserName } = useContext(UserContext);
   return FilteredRestaurants.length === 0 ? (
     <Shimmer />
@@ -152,7 +152,11 @@ const Body = () => {
           </Link>
         ))}
       </div>
+
+      
+      
     </div>
   );
 };
 export default Body;
+// {FilteredRestaurants.length===0?(<div>Sorry!! Search Results could not be found 🥹</div>):(
