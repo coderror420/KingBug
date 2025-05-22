@@ -24,7 +24,7 @@ export const Header = () => {
   //subscribing to the store using a selector
   const cartItems = useSelector((store) => store.cart.items);
   return (
-    <div className="fixed top-0 left-0 w-full z-50 flex justify-between shadow-lg bg-white ">
+    <div className="fixed top-0 left-0 w-full z-50 flex justify-between bg-white shadow-lg">
       <div className="flex justify-between rounded-full items-center">
         <img src={LOGO_URL} className="w-[100px]" />
         <h1 className="text-2xl font-bold text-black">KINGBUG</h1>

@@ -1,4 +1,5 @@
 import { CDN_URL } from "../utils/constants";
+import { MdStars } from "react-icons/md";
 const RestaurantCard = ({resData}) => {
     const deliveryTime = resData?.info?.sla?.deliveryTime;
     const {name, cuisines, avgRating, cloudinaryImageId}= resData?.info;
@@ -7,7 +8,7 @@ const RestaurantCard = ({resData}) => {
         <img className="rounded-md" src={CDN_URL+cloudinaryImageId} />
         <h4 className="font-bold py-1 text-l" >{name}</h4>
         <h6>{cuisines.join(", ")}</h6>
-        <h5>{avgRating+"⭐"}</h5>
+        <h5 className="flex ">{avgRating} <div className="text-green-600 p-1 text-l items-center"><MdStars /></div></h5>
         <h6>{deliveryTime + "mins"}</h6>
       </div>
     );

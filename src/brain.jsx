@@ -1,4 +1,4 @@
-import React , {lazy , Suspense, useEffect, useState} from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { Header } from "./components/Header";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -11,15 +11,15 @@ import UserContext from "./utils/userContext";
 import { Provider } from "react-redux";
 import AppStore from "./utils/AppStore";
 import Cart from "./components/Cart";
-import { ClerkProvider } from '@clerk/clerk-react'
+import { ClerkProvider } from "@clerk/clerk-react";
 import Footer from "./components/footer";
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 if (!PUBLISHABLE_KEY) {
-  throw new Error('Missing Publishable Key')
+  throw new Error("Missing Publishable Key");
 }
 
-const Contact = lazy(()=> import("./components/Contact"));
+const Contact = lazy(() => import("./components/Contact"));
 
 const AppLayout = () => {
   // const [UserName,setUserName]=useState();
@@ -30,25 +30,22 @@ const AppLayout = () => {
   //   setUserName(data.name);
 
   // },[]);
-  return ( 
+  return (
     <React.StrictMode>
-       <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl='/'>
-       <Provider store={AppStore}>
-    {/* // <UserContext.Provider value={{loggedInUser:UserName , setUserName}}> */}
-      <div className="app">
-      <Header />
-      <div className="mt-30 min-h-[70vh]">
-        <Outlet />  
-      </div>
-       <Footer/>
-    
-    </div>
-    {/* // </UserContext.Provider> */}
-    </Provider></ClerkProvider>
-      
+      <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+        <Provider store={AppStore}>
+          {/* // <UserContext.Provider value={{loggedInUser:UserName , setUserName}}> */}
+          <div className="">
+            <Header />
+            <div className="mt-30 min-h-[70vh]">
+              <Outlet />
+            </div>
+            <Footer />
+          </div>
+          {/* // </UserContext.Provider> */}
+        </Provider>
+      </ClerkProvider>
     </React.StrictMode>
-    
-    
   );
 };
 const appRouter = createBrowserRouter([
@@ -59,31 +56,31 @@ const appRouter = createBrowserRouter([
       {
         path: "/",
         element: <Body />,
-       
       },
       {
         path: "/about",
         element: <About />,
-       
       },
       {
         path: "/contact",
-        element: (<Suspense fallback={<h1>Loading...</h1>}><Contact /></Suspense>),
-        
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <Contact />
+          </Suspense>
+        ),
       },
       {
         path: "/restaurant/:resId",
-        element:<RestaurantMenu/>
+        element: <RestaurantMenu />,
       },
-       {
+      {
         path: "/cart",
-        element:<Cart/>
-      }
+        element: <Cart />,
+      },
     ],
     errorElement: <Error />,
   },
-]
-);
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />);
