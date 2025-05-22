@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import AppStore from "./utils/AppStore";
 import Cart from "./components/Cart";
 import { ClerkProvider } from '@clerk/clerk-react'
+import Footer from "./components/footer";
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
 if (!PUBLISHABLE_KEY) {
@@ -36,10 +37,10 @@ const AppLayout = () => {
     {/* // <UserContext.Provider value={{loggedInUser:UserName , setUserName}}> */}
       <div className="app">
       <Header />
-      <div className="mt-30">
+      <div className="mt-30 min-h-[100vh]">
         <Outlet />  
       </div>
-       
+       <Footer/>
     
     </div>
     {/* // </UserContext.Provider> */}

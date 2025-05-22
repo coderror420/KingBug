@@ -53,7 +53,7 @@ const Body = () => {
         <div className="m-1 p-1">
           <input
             type="text"
-            className="border border-solid-black p-1"
+            className="border border-solid border-gray-600 p-1 rounded-full"
             placeholder="Search your tongue"
             value={searchText}
             onChange={(e) => {
@@ -72,7 +72,7 @@ const Body = () => {
             }}
           />
           <button
-            className="px-2 py-1 h-8 rounded-xs bg-orange-400 m-2 text-white hover:bg-orange-500"
+            className="px-2 py-1 h-8 rounded-full bg-orange-400 m-2 text-white hover:bg-orange-500"
             onClick={() => {
               const filteredrestaurants = listOfRestaurants.filter(
                 (res) =>
@@ -91,7 +91,7 @@ const Body = () => {
           </button>
         </div>
         <button
-          className="px-2 py-1 h-8 rounded-xs bg-green-600 m-2 text-white hover:bg-green-700 "
+          className="px-2 py-1 h-8 rounded-full bg-green-600 m-2 text-white hover:bg-green-700 "
           onClick={() => {
             const filteredList = listOfRestaurants.filter((res) => {
               return res.info.avgRating > 4;
