@@ -61,12 +61,12 @@ export const Header = () => {
 
           <button
             className=" flex font-semibold text-black "
-          ><Link> <SignedOut>
+          ><SignedOut>
               <SignInButton />
             </SignedOut>
             <SignedIn>
               <UserButton />
-            </SignedIn></Link>
+            </SignedIn>
            
            
           </button>
