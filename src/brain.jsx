@@ -37,7 +37,7 @@ const AppLayout = () => {
     {/* // <UserContext.Provider value={{loggedInUser:UserName , setUserName}}> */}
       <div className="app">
       <Header />
-      <div className="mt-30 min-h-[100vh]">
+      <div className="mt-30 min-h-[70vh]">
         <Outlet />  
       </div>
        <Footer/>
