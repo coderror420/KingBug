@@ -1,8 +1,8 @@
 # [Live Demo](https://kingbug.netlify.app/)
 
 # KingBug
->- Built using React, Redux , TailwindCSS.
->- Used Swiggy API's to fetch restaurant's data.
+ Built using React, Redux , TailwindCSS.
+ Used Swiggy API's to fetch restaurant's data.
 # React Hooks
 (Normal JS utility functions)
 - useState() - Superpowerful state Variables in react
