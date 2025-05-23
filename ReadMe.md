@@ -26,6 +26,8 @@
 ![Screenshot 2025-05-22 133029](https://github.com/user-attachments/assets/3dfdf05a-be83-4603-9ff8-d25809f0b0eb)
 ![Screenshot 2025-05-22 133044](https://github.com/user-attachments/assets/a1ed3de0-abec-48db-b7ab-686d7e866a29)
 
+>there's an issue with this project. for now, please ensure you have enabled Allow CORS extension in your browser to keep the web application smoothly running.
+
 
 
 
