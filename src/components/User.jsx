@@ -5,7 +5,7 @@ const User=(props)=>{
 
     },[]);
     async function getUserInfo(){
-        const data= await fetch("https://corsproxy.io/?https://api.github.com/users/USERNAME");
+        const data= await fetch("https://api.github.com/users/USERNAME");
         
     }
     return(
